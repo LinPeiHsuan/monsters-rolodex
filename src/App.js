@@ -1,9 +1,10 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import CardList from './cardList/cardList.component';
+// import SearchBox from './searchBox/searchBox.component';
 
 function App() {
-  const [monsters, setMonsters] = useState(['12s']);
+  const [monsters, setMonsters] = useState(['']);
   
   useEffect(() => {
       const fetchFunc = async () => {
@@ -13,12 +14,11 @@ function App() {
       setMonsters(resJson)
     };
     fetchFunc()
+    console.log('after fetchFunc')
     }, []);
-
-  // const searchFilter = monsters.filter((monster) =>
-  //   monster.name.toLowerCase().includes(search   .toLowerCase()))
-
-  return (
+    
+    
+    return (
     <div className="App">
       <header className="App-header">
         <h1>Monsters-rolodex</h1>
