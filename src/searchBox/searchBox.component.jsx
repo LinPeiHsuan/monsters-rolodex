@@ -1,13 +1,12 @@
-// import React, {useState, useEffect} from 'react';
-// import './searchBox.style.css'
+import './searchBox.style.css'
 
-// const SearchBox = () => {
-//     <input
-//     className='search'
-//     type='SearchBox'
-//     placeholder='search monsters'
-//     // handleChange={search}
-//     />
-// }
+const SearchBox = ({searchFilter}) => {
+    <input
+    className='search'
+    type='SearchBox'
+    placeholder='search monsters'
+    handleChange={searchFilter}
+    />
+}
 
-// export default SearchBox;
+export default SearchBox;

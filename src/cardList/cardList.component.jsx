@@ -19,7 +19,7 @@ const CardList = ({monsters}) => {
 
     return (
         <div className="CardList">
-            {monsters.map((monster) => {
+            {monsters ? monsters.map((monster) => {
                 return (
                     // <div>
                     //     <h3>{monster.name}</h3>
@@ -28,7 +28,7 @@ const CardList = ({monsters}) => {
                     console.log('monster map', [monster.name, monster.email]),
                     <Card key={monster.id} monster={monster} />
                 )
-            })}
+            }) : null}
         </div>
 
 
